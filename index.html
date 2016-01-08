@@ -36,7 +36,7 @@ var map = L.mapbox.map('map', null, {
       Satellite: L.mapbox.tileLayer('mapbox.satellite')
   };
 
-  layers.Streets.addTo(map);
+  layers.HOT.addTo(map);
   L.control.layers(layers).addTo(map);
 // Since featureLayer is an asynchronous method, we use the `.on('ready'`
 // call to only use its marker data once we know it is actually loaded.
