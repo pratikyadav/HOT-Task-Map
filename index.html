@@ -14,7 +14,7 @@
 </head>
 <body>
 
-
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
 <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
@@ -49,6 +49,8 @@ L.mapbox.featureLayer('pratikyadav.ol34n5n5').on('ready', function(e) {
     });
     map.addLayer(clusterGroup);
 });
+
+var hash = L.hash(map);
 </script>
 
 
