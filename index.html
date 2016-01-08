@@ -26,10 +26,18 @@ L.mapbox.accessToken = 'pk.eyJ1IjoicHJhdGlreWFkYXYiLCJhIjoiMTA2YWUxNjRkNmFmZGQ4Y
 // Here we don't use the second argument to map, since that would automatically
 // load in non-clustered markers from the layer. Instead we add just the
 // backing tileLayer, and then use the featureLayer only for its data.
-var map = L.mapbox.map('map')
-    .setView([0, 0], 3)
-    .addLayer(L.mapbox.tileLayer('mapbox.streets'));
+var map = L.mapbox.map('map', null, {
+      maxZoom: 18
+  }).setView([22.76, -25.84], 3);
 
+  var layers = {
+      Streets: L.mapbox.tileLayer('mapbox.streets'),
+      Outdoors: L.mapbox.tileLayer('mapbox.outdoors'),
+      Satellite: L.mapbox.tileLayer('mapbox.satellite')
+  };
+
+  layers.Streets.addTo(map);
+  L.control.layers(layers).addTo(map);
 // Since featureLayer is an asynchronous method, we use the `.on('ready'`
 // call to only use its marker data once we know it is actually loaded.
 L.mapbox.featureLayer('pratikyadav.ol34n5n5').on('ready', function(e) {
