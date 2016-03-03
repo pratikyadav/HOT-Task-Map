@@ -6,3 +6,5 @@ Made using [HOT Tasking Manager API](https://github.com/hotosm/osm-tasking-manag
 
 Shapefile for all the tasks - /data/
 Python scripts used to download JSONs and merge into single GeoJSON- /script/
+
+HOT Blog-> https://hotosm.org/updates/2016-02-08_the_global_footprint_of_hot
